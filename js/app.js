@@ -22,8 +22,12 @@ function fillGrid(size) {
 }
 
 function changeBG(e) {
-  let randomLightness = Math.ceil(Math.random() * 100)
-  e.target.style.background = `hsla(214, 100%, ${randomLightness}%, 1)`
+  // let randomLightness = Math.ceil(Math.random() * 100)
+  // e.target.style.background = `hsla(214, 100%, ${randomLightness}%, 1)`
+  let randomR = Math.ceil(Math.random() * 256)
+  let randomG = Math.ceil(Math.random() * 256)
+  let randomB = Math.ceil(Math.random() * 256)
+  e.target.style.background = `rgba(${randomR}, ${randomG}, ${randomB}, 1)`
 }
 
 function resetGrid() {
