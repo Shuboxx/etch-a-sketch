@@ -36,6 +36,11 @@ function resetGrid() {
     container.removeChild(x)
   })
   let userInput = parseInt(prompt("Please enter a new grid size"))
+  while (userInput > 64 || userInput < 1) {
+    userInput = parseInt(
+      prompt(`Please enter a new grid size between 1 and 64`)
+    )
+  }
   gridSize(userInput)
   fillGrid(userInput)
 }
